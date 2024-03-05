@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/general.css">
+  <title>Formulario de Administrador</title>
+  </head>
+  <body>
+  <!-- <iframe src="components/navbar/nav.html" class="navbar"></iframe> -->
+  <h2>Ingrese su nombre:</h2>
+  <div class="divp"> 
+    <form action="/admin" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" maxlength="10">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" required maxlength="3">
+      <label for="passw">Password:</label>
+      <input type="password" id="passw" name="passw"  maxlength="6">
+      <br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  </body>
+  </html>  
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+La carpeta `shared` es un directorio que se utiliza para almacenar archivos que son compartidos entre diferentes partes de tu aplicación. 
+Es una convención de nomenclatura comúnmente utilizada para organizar elementos que se comparten entre múltiples componentes, como plantillas de vistas, 
+estilos CSS, scripts JavaScript, entre otros.
+
+En el contexto de una aplicación web, los archivos compartidos en la carpeta `shared` suelen incluir:
+
+1. **Plantillas de Vistas Compartidas:** Por ejemplo, encabezados (`header.ejs`) o pies de página (`footer.ejs`) que se utilizan en múltiples páginas de tu sitio web.
+
+2. **Estilos CSS Compartidos:** Archivos CSS que se aplican a varias partes de tu aplicación, como estilos para botones, formularios, tipografías, etc.
+
+3. **Scripts JavaScript Compartidos:** Código JavaScript que se reutiliza en diferentes partes de tu aplicación, como funciones de utilidad, configuraciones de comportamiento común, etc.
+
+La carpeta `shared` proporciona un lugar centralizado para estos archivos compartidos, lo que facilita su gestión y mantenimiento. 
+Además, al tener estos elementos compartidos en un solo lugar, puedes evitar la duplicación de código y garantizar una coherencia en el diseño y 
+la funcionalidad en toda tu aplicación.
+
+Aquí tienes un ejemplo de cómo podría verse la estructura de la carpeta `shared` dentro del contexto de una aplicación web:
+
+```
+shared/
+│
+├── header.ejs          <--- Encabezado compartido
+├── footer.ejs          <--- Pie de página compartido
+├── styles/
+│   ├── buttons.css     <--- Estilos CSS para botones
+│   ├── forms.css       <--- Estilos CSS para formularios
+│   └── ...
+└── scripts/
+    ├── utils.js        <--- Funciones de utilidad JavaScript
+    ├── config.js       <--- Configuraciones JavaScript compartidas
+    └── ...
+```
+
+Estos archivos en la carpeta `shared` pueden ser incluidos y utilizados en diferentes partes de tu aplicación según sea necesario, lo que te permite mantener un código limpio, organizado y fácil de mantener.

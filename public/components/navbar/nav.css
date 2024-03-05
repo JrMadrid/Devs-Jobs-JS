@@ -1,0 +1,32 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+/* Estilos del navbar */
+.navbar {
+	overflow: hidden; /* Para ocultar el contenido que desborda el navbar */
+	position: sticky; /* Para que el navbar se mantenga fijo en la parte superior */
+	top: 0; /* Para fijar el navbar en la parte superior */
+
+}
+
+.navbar a {
+	float: left; /* Para alinear los elementos del navbar a la izquierda */
+	display: block; /* Para que los enlaces del navbar sean bloques completos */
+	color: white; /* Color del texto de los enlaces del navbar */
+	text-align: center; /* Alineación del texto en el centro */
+	padding: 14px 20px; /* Espaciado interno de los enlaces */
+	text-decoration: none; /* Sin subrayado en los enlaces */
+
+}
+
+.navbar a:hover {
+	background-color: steelblue; /* Color de fondo cuando se pasa el mouse sobre los enlaces */
+}
+
+.navbar-buttons {
+	margin-left: auto; /* Empuja los botones hacia el extremo derecho del navbar */
+	/* Comentario: esta regla de CSS coloca los botones en la parte derecha del navbar */
+} 

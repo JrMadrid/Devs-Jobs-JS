@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="shortcut icon" href="../img/HN.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Empresa</title>
+</head>
+  <iframe src="../components/navbar/navi.html" class="navbar" frameborder="0"></iframe>
+  <div class="divp" style="text-align: center;"> 
+    <img src="../img/PNEH.png" class="fondopneh">
+    <h2>Ingrese sus Credenciales</h2>
+    <form action="/empresa/login" method="POST" style="text-align: center;">
+      <label for="codigo">Código:</label>
+      <input type="text" id="codigo" name="codigo" required maxlength="12" pattern="[A-Z]{4}[0-9]{4}[0-9]{4}" placeholder="AAAA########">
+      <br>
+      <br>
+      <label for="clave">Clave:</label>
+      <input type="password" id="clave" name="clave" required maxlength="20">
+      <br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <iframe scrolling="no" src="../components/footer/footeri.html" class="footer"></iframe></body>
+</html>

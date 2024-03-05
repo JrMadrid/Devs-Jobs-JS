@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="shortcut icon" href="../img/HN.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Postulante Usuario</title>
+</head>
+
+<body>
+
+  <iframe src="../components/navbar/navi.html" class="navbar" frameborder="0"></iframe>
+  <div class="divp" style="text-align: center;">
+    <img src="../img/PNEH.png" class="fondopneh">
+    <h2>Registro de Usuario para Postulante</h2>
+
+    <form action="/postulante/usuario" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required maxlength="12"> <br> <br>
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required maxlength="45"><br> <br>
+      <label for="clave">Clave:</label>
+      <input type="password" id="clave" name="clave" required maxlength="20"><br> <br>
+      <br>
+      <button type="submit" style="margin-bottom: 20px;">Enviar</button>
+    </form>
+
+  </div>
+  <iframe scrolling="no" src="../components/footer/footeri.html" class="footer"></iframe>
+</body>
+</body>
+
+</html>

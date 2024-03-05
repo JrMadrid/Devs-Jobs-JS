@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../../img/HN.png" type="image/x-icon">
+	<link rel="stylesheet" href="../css/general.css">
+	<title>Vacantes</title>
+</head>
+
+<body>
+	<iframe scrolling="no" src="../../components/navbar/navp.html" class="navbar"></iframe>
+	<div class="divp">
+		<img src="../img/PNEH.png" class="fondopneh">
+		<div>
+			<table width=90% cellspacing=0 cellpadding=0>
+				<h1>Listado de Vacantes</h1>
+				<thead>
+					<tr>
+						<th>VacanteID</th>
+						<th>Puesto</th>
+						<th>Jornada</th>
+						<th>Lugar</th>
+						<th>Edad</th>
+						<th>Grado Academico</th>
+						<th>Experiencia</th>
+						<th>Conocimientos</th>
+            <th>Descripcion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% resQuery.forEach(function(eje) { %>
+						<!-- resQuery es la devolucion resulta de res.render() de la app.js -->
+						<tr>
+							<td><%= eje.VacanteID %></td>
+							<td><%= eje.Puesto %></td>
+							<td><%= eje.Jornada %></td>
+							<td><%= eje.Lugar %></td>
+							<td><%= eje.Edad %></td>
+							<td><%= eje.GradoAcademico %></td>
+							<td><%= eje.Experiencia %></td>
+							<td><%= eje.Conocimientos %></td>
+							<td><%= eje.Descripcion %></td>
+						</tr>
+            <tfoot>
+              <tr>
+                
+              </tr>
+            </tfoot>
+						<% }); %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

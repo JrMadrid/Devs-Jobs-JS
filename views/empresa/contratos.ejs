@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../../img/HN.png" type="image/x-icon">
+	<link rel="stylesheet" href="../css/general.css">
+	<title>Contratos</title>
+</head>
+
+<body>
+	<iframe scrolling="no" src="../../components/navbar/nave.html" class="navbar"></iframe>
+	<div class="divp">
+		<img src="../img/PNEH.png" class="fondopneh">
+		<div class="position-absolute text-center" >
+			<table width=90% cellspacing=0 cellpadding=0>
+				<h1>Listado de Contratos</h1>
+				<thead>
+					<tr>
+						<th>ContradoID</th>
+						<th>VacanteID</th>
+            <th>Postulante</th>
+						<th>Contrato</th>
+						<th>Fecha Inicio</th>
+						<th>Fecha Vencimiento</th>
+						<th>Horario</th>
+						<th>Sueldo</th>
+						<th>Dias Laborales</th>
+						<th>Vacaciones</th>
+						<th>Departamento</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% resQuery.forEach(function(eje) { %>
+						<tr>
+							<td><%= eje.ContratoID %></td>
+							<td><%= eje.VacanteID %></td>
+							<td><%= eje.NumeroIdentidad %></td>
+							<td><%= eje.TipoContrato %></td>
+							<td><%= eje.FechaInicio %></td>
+							<td><%= eje.FechaVencimiento %></td>
+							<td><%= eje.Horario %></td>
+							<td><%= eje.Sueldo %></td>
+							<td><%= eje.DiasLaborales %></td>
+							<td><%= eje.DiasVacaciones %></td>
+							<td><%= eje.Departamento %></td>
+						</tr>
+            <tfoot>
+              <tr>
+                
+              </tr>
+            </tfoot>
+						<% }); %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="date.js"></script>
+</body>
+
+</html>

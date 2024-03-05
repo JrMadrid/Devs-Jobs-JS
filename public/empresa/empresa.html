@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="shortcut icon" href="../img/HN.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Empresa</title>
+</head>
+<iframe src="../components/navbar/nave.html" class="navbar" frameborder="0"></iframe>
+<div class="divp" style="text-align: center;">
+  <img src="../img/PNEH.png" class="fondopneh">
+  <h2>Registro de Empresa</h2>
+  <form action="/empresa/empresa" method="POST"> <!-- /////////////////////////////////////// -->
+    <label for="empreid">EmpresaID:</label>
+      <input type="text" id="empreid" name="empreid" pattern="[A-Z]{2}-[0-9]{4}-[0-9]{4}" placeholder="XX-####-####" required minlength="12" maxlength="12"> <br> <br>
+    <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre"  required maxlength="100"> <br> <br>
+    <label for="rtn">RTN:</label>
+      <input type="text" id="rtn" name="rtn"  required maxlength="15"> <br> <br>
+    <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion"  required maxlength="200"> <br> <br>
+    <label for="telefono">Telefono:</label>
+      <input type="text" id="telefono" name="telefono"  required maxlength="15"> <br> <br>
+    <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo"  required maxlength="100"> <br> <br>
+    <label for="descr">Descripción:</label>
+      <input type="text" id="descr" name="descr"  required maxlength="100"> <br> <br>
+    <label for="codigo">Código:</label>
+      <input type="text" id="codigo" name="codigo"  required maxlength="12" pattern="[A-Z]{4}[0-9]{8}" placeholder="XXXX########"> <br> <br>
+    <button type="submit" style="margin-bottom: 20px;">Enviar</button>
+  </form>
+</div>
+</html>

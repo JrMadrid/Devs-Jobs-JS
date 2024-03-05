@@ -1,0 +1,41 @@
+proyecto/
+│
+├── public/                 <--- Archivos estáticos accesibles públicamente (CSS, JS, imágenes, etc.)
+│   ├── css/
+│   ├── js/
+│   └── img/
+│
+├── views/                  <--- Plantillas de vistas (EJS, HTML, etc.)
+│   ├── empresa/
+│   │   ├── index.ejs       <--- Página principal de empresa
+│   │   └── ...
+│   │
+│   ├── postulante/
+│   │   ├── index.ejs       <--- Página principal de postulante
+│   │   └── ...
+│   │
+│   ├── shared/
+│   │   ├── header.ejs      <--- Encabezado compartido
+│   │   ├── footer.ejs      <--- Pie de página compartido
+│   │   └── ...
+│   │
+│   ├── error.ejs           <--- Página de error
+│   └── ...
+│
+├── routes/                 <--- Controladores de rutas
+│   ├── empresaRoutes.js    <--- Controladores de rutas de empresa
+│   ├── postulanteRoutes.js <--- Controladores de rutas de postulante
+│   └── ...
+│
+├── models/                 <--- Modelos de datos
+│   ├── empresaModel.js     <--- Modelo de datos de empresa
+│   ├── postulanteModel.js  <--- Modelo de datos de postulante
+│   └── ...
+│
+├── controllers/            <--- Controladores de lógica de negocio
+│   ├── empresaController.js    <--- Controlador de empresa
+│   ├── postulanteController.js <--- Controlador de postulante
+│   └── ...
+│
+├── app.js                  <--- Punto de entrada de la aplicación
+└── package.json            <--- Información del proyecto y dependencias

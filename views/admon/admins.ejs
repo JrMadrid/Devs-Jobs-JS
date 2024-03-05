@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../../img/HN.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/general.css">
+	<title>Usuarios</title>
+</head>
+
+<body>
+	<iframe scrolling="no" src="../../components/navbar/navi.html" class="navbar"></iframe>
+	<link rel="shortcut icon" href="../../img/HN.png" type="image/x-icon">
+	<div class="divp" style="height:120hv">
+		<img src="img/PNEH.png" class="fondopneh">
+		<div class="position-absolute text-center" divp>
+			<table width=100% cellspacing=0 cellpadding=0>
+				<h1>Listado de Administradores</h1>
+				<thead>
+					<tr>
+						<th>Nombres</th>
+						<th>ID</th>
+						<th>Contraseña</th>
+						<th>Nivel</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% Object.keys(resQuery).forEach(function(key) { %>
+						<tr>
+							<td>
+								<%= resQuery[key].name %>
+							</td>
+							<td>
+								<%= resQuery[key].id %>
+							</td>
+							<td>
+								<%= resQuery[key].password %>
+							</td>
+							<td>
+								<%= resQuery[key].nivel %>
+							</td>
+						</tr>
+						<% }); %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  <iframe scrolling="no" src="../../components/footer/footeri.html" class="footer"></iframe></body>
+</body>
+
+</html>

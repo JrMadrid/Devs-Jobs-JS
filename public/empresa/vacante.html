@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="shortcut icon" href="../img/HN.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Vacante</title>
+</head>
+<iframe src="../components/navbar/nave.html" class="navbar" frameborder="0"></iframe>
+<div class="divp" style="text-align: center;">
+  <img src="../img/PNEH.png" class="fondopneh">
+  <h2>Registro de Vacante</h2>
+    <label for="VacanteID">VacanteID:</label>
+      <input type="text" id="VacanteID" name="VacanteID" pattern="[A-Z]{2}[0-9]{5}" placeholder="XX#####" required minlength="7" maxlength="7"> <br> <br>
+    <label for="EmpresaID">EmpresaID:</label>
+      <input type="text" id="EmpresaID" name="EmpresaID" pattern="[A-Z]{2}-[0-9]{4}-[0-9]{4}" placeholder="XX-####-####" required minlength="12" maxlength="12"> <br> <br>
+    <label for="Puesto">Puesto:</label>
+      <input type="text" id="Puesto" name="Puesto" required maxlength="200"> <br> <br>
+    <label for="Jornada">Jornada:</label>
+      <input type="text" id="Jornada" name="Jornada" required maxlength="200"> <br> <br>
+    <label for="Descripcion">Descripcion:</label>
+      <input type="text" id="Descripcion" name="Descripcion" required maxlength="500"> <br> <br>
+    <label for="Lugar">Lugar:</label>
+      <input type="text" id="Lugar" name="Lugar" required maxlength="100"> <br> <br>
+    <label for="Edad">Edad:</label>
+      <input type="text" id="Edad" name="Edad" required maxlength="15"> <br> <br>
+    <label for="GradoAcademico">Grado Academico:</label>
+      <input type="text" id="GradoAcademico" name="GradoAcademico" required maxlength="200"> <br> <br>
+    <label for="Experiencia">Experiencia:</label>
+      <input type="text" id="Experiencia" name="Experiencia" required maxlength="300"> <br> <br>
+    <label for="Conocimientos">Conocimientos:</label>
+      <input type="text" id="Conocimientos" name="Conocimientos" required maxlength="500"> <br> <br>
+    <label>Disponibilidad Viajar: </label>
+      <label><input type="radio" name="DisponibilidadViajar" value="Si" checked>Si</label>
+      <label><input type="radio" name="DisponibilidadViajar" value="No">No</label><br> <br>
+    <label for="DocumentosRequeridos">Documentos Requeridos:</label>
+      <input type="text" id="DocumentosRequeridos" name="DocumentosRequeridos" required maxlength="500"> <br> <br>
+      
+    <button type="submit" style="margin-bottom: 20px;">Enviar</button>
+  </form>
+</div>
+</html>

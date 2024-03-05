@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../../img/HN.png" type="image/x-icon">
+	<link rel="stylesheet" href="../css/general.css">
+	<title>Postulantes</title>
+</head>
+
+<body>
+	<iframe scrolling="no" src="../../components/navbar/navi.html" class="navbar"></iframe>
+	<div class="divp" style="height:120hv">
+		<img src="../img/PNEH.png" class="fondopneh">
+		<div class="position-absolute text-center" divp>
+			<table width=100% cellspacing=0 cellpadding=0>
+				<h1>Usuarios Postulantes</h1>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Correo</th>
+						<th>Clave</th>
+					</tr>
+				</thead>
+				<tbody>
+          <% resQuery.forEach(function(eje) { %>
+						<tr>
+							<td>
+								<%= eje.nickname %> <!-- asi se encrusta el js aqui-->
+							</td>
+							<td>
+								<%= eje.correo %> <!-- asi se encrusta el js aqui-->
+							</td>
+							<td>
+								<%= eje.password %> <!-- asi se encrusta el js aqui-->
+							</td>
+						</tr>
+						<% }); %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

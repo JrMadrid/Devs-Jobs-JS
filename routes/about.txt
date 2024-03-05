@@ -1,0 +1,1 @@
+La carpeta routes contiene los controladores de rutas que manejan las solicitudes HTTP para cada parte de la aplicación.

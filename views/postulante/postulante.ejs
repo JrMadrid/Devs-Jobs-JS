@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../../img/HN.png" type="image/x-icon">
+	<link rel="stylesheet" href="../css/general.css">
+	<title>Postulantes</title>
+</head>
+<body>
+	<iframe scrolling="no" src="../../components/navbar/navp.html" class="navbar"></iframe>
+	<div class="divp" style="height:120hv">
+		<img src="../img/PNEH.png" class="fondopneh" >
+		<div>
+			<table width=100% cellspacing=0 cellpadding=0>
+				<h1>Listado de Postulantes</h1>
+				<thead>
+					<tr>
+						<th>Identidad</th>
+						<th>Nombres</th>
+						<th>Apellidos</th>
+						<th>E-Mail</th>
+						<th>Telefono</th>
+						<th>Fecha de Nacimiento</th>
+						<th>Sexo</th>
+						<th>Dirección</th>
+						<th>Estado</th>
+						<th>Area</th>
+						<th>Descripción</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% resQuery.forEach(function(eje) { %>
+						<tr>
+							<td><%= eje.NumeroIdentidad %></td>
+							<td><%= eje.Nombres %></td>
+							<td><%= eje.Apellidos %></td>
+							<td><%= eje.CorreoElectronico %></td>
+							<td><%= eje.Telefono %></td>
+							<td><%= eje.FechaNacimiento %></td>
+							<td><%= eje.Sexo %></td>
+							<td><%= eje.Direccion %></td>
+							<td><%= eje.Estadop %></td>
+							<td><%= eje.Area %></td>
+							<td><%= eje.Descripcion %></td>
+						</tr>
+						<% }); %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

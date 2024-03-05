@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="shortcut icon" href="../img/HN.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Contrato</title>
+</head>
+<iframe src="../components/navbar/navp.html" class="navbar" frameborder="0"></iframe>
+<div class="divp" style="text-align: center;">
+  <img src="../img/PNEH.png" class="fondopneh">
+  <h2>Registro de Contratos</h2>
+  
+  <form action="/postulante/contrato" method="POST">
+    <label for="contratoid">ContratoID:</label>
+      <input type="text" id="contratoid" name="contratoid" required minlength="6" maxlength="6" pattern="[A-Z]{2}[0-9]{4}" placeholder="XX####"> <br> <br>
+    <label for="vacanteid">VacanteID:</label>
+      <input type="text" id="vacanteid" name="vacanteid" required maxlength="7" pattern="[A-Z]{2}[0-9]{5}" placeholder="XX#####"> <br> <br><br>
+    <label for="numid">Numero de Identidad:</label>
+      <input type="text" id="numid" name="numid" required maxlength="15" pattern="[0-9]{4}-[0-9]{4}-[0-9]{5}" placeholder="####-####-#####"> <br> <br><br>
+    <label>Tipo de Contrato: </label>
+      <label><input type="radio" name="tipoc" value="Permantente" checked>Permantente</label>
+      <label><input type="radio" name="tipoc" value="Temporal">Temporal</label><br> <br>
+    <label for="fechai">Fecha Inicial:</label>
+      <input type="date" id="fechai" name="fechai" required> <br> <br><br>
+    <label for="fechaf">Fecha Final:</label>
+      <input type="date" id="fechaf" name="fechaf" required> <br> <br><br>
+    <label for="horario">Horario:</label>
+      <input type="text" id="horario" name="horario" required  maxlength="50"> <br> <br>
+    <label for="sueldo">Sueldo:</label>
+        <input type="text" id="sueldo" name="sueldo" required > <br> <br><br>
+    <label for="diasl">Dias Laborales:</label>
+      <input type="text" id="diasl" name="diasl" required  maxlength="50"> <br> <br><br>
+    <label for="diasv">Dias Vacacionales:</label>
+      <input type="text" id="diasv" name="diasv" required  maxlength="50"> <br> <br>
+    <label for="depa">Departamento:</label>
+      <input type="text" id="depa" name="depa" required > <br> <br><br>
+      
+      
+    <button type="submit" style="margin-bottom: 20px;">Enviar</button>
+  
+  </form>
+</div>
+</body>
+
+</html>

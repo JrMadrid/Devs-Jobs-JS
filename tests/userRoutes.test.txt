@@ -1,0 +1,28 @@
+// Importación dinámica de Chai
+import('chai').then(chai => {
+  const expect = chai.expect; 
+  const request = require('supertest');
+  const app = require('../app');
+
+  describe('rou_users routes', () => {
+    describe('Get /registro', () => {
+      it('Deberia retornar un arreglo de usuarios', async () => {
+        const res = await request(app).get('/registro');
+        expect(res.status).to.equal(200);
+        expect(res.body).to.be.an('array');
+      });
+    });
+    describe('POST /registro', () => {
+      it('Deberia crear un nuevo usuario', async () => {
+        const userData = { nombre: 'Test User', correo: 'test@example.com' };
+        const res = await request(app)
+          .post('/registro')
+          .send(userData);
+        expect(res.status).to.equal(201);
+      });
+    });
+  });
+}).catch(error => {
+  // Maneja cualquier error de importación aquí
+  console.error('Error al importar el módulo chai:', error);
+});
