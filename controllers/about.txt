@@ -1,0 +1,35 @@
+Controllers (Controladores):
+
+El directorio controllers contiene archivos que definen la lógica de control de tu aplicación.
+Los controladores actúan como intermediarios entre las solicitudes del cliente y los modelos de datos. Reciben las solicitudes HTTP, realizan cualquier procesamiento necesario y luego interactúan con los modelos para recuperar o manipular datos.
+Cada controlador generalmente se asocia con un conjunto específico de rutas de la aplicación. Por ejemplo, un controlador userController.js podría manejar todas las solicitudes relacionadas con la gestión de usuarios.
+Los controladores pueden exportar funciones que se utilizan como manejadores de rutas en tu aplicación Express u otro marco web.
+Estos directorios y sus contenidos forman parte de una arquitectura organizada que separa claramente las preocupaciones en tu aplicación. Los modelos se encargan de la gestión de datos, mientras que los controladores se encargan de la lógica de negocio y la manipulación de las solicitudes del cliente. Esta separación de responsabilidades facilita la modificación, expansión y mantenimiento de tu aplicación a medida que crece en complejidad.
+
+// userController.js
+
+// Importar el modelo de usuario
+const User = require('../models/userModel');
+
+// Controlador para manejar las solicitudes relacionadas con los usuarios
+const userController = {
+  // Manejador de la ruta para obtener la información de un usuario por su ID
+  getUserById(req, res) {
+    // Supongamos que obtenemos el ID del usuario de la solicitud (req.params.id)
+    const userId = req.params.id;
+
+    // Crear un nuevo usuario (aquí se simularía una consulta a la base de datos)
+    const user = new User(userId, 'john_doe', 'john@example.com');
+
+    // Enviar la información del usuario como respuesta
+    res.send(user.getInfo());
+  },
+
+  // Otros métodos del controlador (por ejemplo, para crear, actualizar o eliminar usuarios)
+};
+
+// Exportar el controlador de usuario para su uso en otras partes de la aplicación
+module.exports = userController;
+En este ejemplo, tenemos un controlador userController que contiene métodos para manejar diferentes tipos de solicitudes relacionadas con los usuarios. En este caso, tenemos un método getUserById() que maneja las solicitudes para obtener la información de un usuario por su ID. Este método crea un nuevo usuario usando el modelo User y envía su información como respuesta.
+
+Estos son solo ejemplos simples para ilustrar cómo podrían verse los modelos y controladores en una aplicación web. En una aplicación real, estos archivos y sus funciones serían más complejos y manejarían una variedad de casos de uso y operaciones relacionadas con los datos y la lógica de negocio de tu aplicación.

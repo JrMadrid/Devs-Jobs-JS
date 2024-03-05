@@ -1,0 +1,31 @@
+Los directorios models y controllers son comunes en la arquitectura de una aplicación basada en el patrón Modelo-Vista-Controlador (MVC). Este patrón es una forma popular de organizar el código de una aplicación web para mejorar su estructura, mantenibilidad y escalabilidad.
+
+Models (Modelos):
+
+El directorio models contiene archivos que definen la estructura y la lógica de los datos de tu aplicación.
+Los modelos representan los datos subyacentes de tu aplicación, como usuarios, publicaciones, productos, etc.
+Cada modelo generalmente se define en su propio archivo, donde se especifican los campos que contiene y cualquier lógica relacionada con la manipulación de esos datos.
+Los modelos se utilizan para interactuar con la base de datos y realizar operaciones como crear, leer, actualizar y eliminar registros.
+
+////////////////////////////////////////////EJEMPLO
+// userModel.js
+
+// Definición del modelo de usuario
+class User {
+  constructor(id, username, email) {
+    this.id = id;
+    this.username = username;
+    this.email = email;
+  }
+
+  // Método para obtener la información del usuario
+  getInfo() {
+    return `ID: ${this.id}, Username: ${this.username}, Email: ${this.email}`;
+  }
+}
+
+// Exportar el modelo de usuario para su uso en otras partes de la aplicación
+module.exports = User;
+
+
+En este ejemplo, tenemos un modelo simple de usuario que representa un usuario en nuestra aplicación. El modelo User tiene propiedades como id, username y email, y un método getInfo() para obtener la información del usuario.
